@@ -5,6 +5,7 @@ header {
   margin-bottom: 10rem;
   cursor: pointer;
   transition: ease-out 500ms;
+  user-select: none;
 }
 header:hover {
   transform: scale(1.05);
