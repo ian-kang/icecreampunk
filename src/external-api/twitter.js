@@ -1,39 +1,34 @@
-const BASE_URL = "https://api.twitter.com/2";
-const bearerToken = process.env.REACT_APP_TWITTER_BEARER_TOKEN;
+export default class TwitterApi {
+  BASE_URL = "https://api.twitter.com/2";
+  searchTweetsURL = "/tweets/search/recent?";
 
-const searchTweetsURL = "/tweets/search/recent";
+  constructor(BEARER_TOKEN) {
+    this.bearerToken = BEARER_TOKEN;
+  }
 
-const params = {
-  query: "nft -is:retweet lang:en",
-  max_results: 100,
-  "tweet.fields": "created_at,public_metrics",
-  expansions: "author_id",
-};
+  async searchTweets(params) {
+    const url = this.urlGenerator(this.BASE_URL, this.searchTweetsURL, params);
 
-const searchTweetsendpoint = urlGenerator(baseURL, searchTweetsURL, params);
-getData(searchTweetsendpoint);
+    console.log(url);
 
-function urlGenerator(baseURL, endpoint, params) {
-  return baseURL + endpoint + new URLSearchParams(params).toString();
+    console.log(`Bearer ${this.bearerToken}`);
+
+    const response = await fetch(url, {
+      headers: {
+        Authorization: `Bearer ${this.bearerToken}`,
+      },
+    });
+    return await response.json(); // Promise
+  }
+
+  urlGenerator(baseURL, endpoint, params) {
+    return baseURL + endpoint + new URLSearchParams(params).toString();
+  }
 }
 
-async function getData(url) {
-  const response = await fetch(url, {
-    method: "GET",
-    headers: {
-      Authentication: bearerToken,
-    },
-  });
-  return response.json(); // Promise
-}
-
-async function postData(url, data = {}) {
-  const response = await fetch(url, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(data), // body data type must match "Content-Type" header
-  });
-  return response.json(); // parses JSON response into native JavaScript objects
-}
+// const params = {
+//   query: "nft -is:retweet lang:en",
+//   max_results: 100,
+//   "tweet.fields": "created_at,public_metrics",
+//   expansions: "author_id",
+// };

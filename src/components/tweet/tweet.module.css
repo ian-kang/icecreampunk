@@ -1,0 +1,74 @@
+.container {
+  width: 45rem;
+  display: flex;
+  font-size: 1.2rem;
+  flex-direction: column;
+  transition: ease-out 500ms;
+  margin: 2rem;
+}
+
+.container {
+  border: solid 0.2rem #fff;
+  border-radius: 1rem;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #bc13fe,
+    0 0 0.8rem #bc13fe, 0 0 2.8rem #bc13fe, inset 0 0 1.3rem #bc13fe;
+  cursor: pointer;
+  user-select: none;
+}
+
+.container:hover {
+  transform: scale(1.02);
+}
+
+.profileBox {
+  display: flex;
+  align-items: center;
+}
+
+.textBox {
+  text-align: center;
+  width: 100%;
+  overflow-wrap: break-word;
+  margin: 2rem 0;
+}
+
+.countBox {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-around;
+}
+
+.retweetBox,
+.replyBox,
+.likeBox,
+.quoteBox {
+  width: 10rem;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.picture {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  padding: 0.5rem;
+}
+
+.name,
+.username {
+  padding: 0.5rem;
+}
+
+.username {
+}
+
+.text {
+}
+
+.retweetCount,
+.replyCount,
+.likeCount,
+.quoteCout {
+  padding-top: 0.3rem;
+}
