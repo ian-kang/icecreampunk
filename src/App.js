@@ -1,21 +1,24 @@
+import { useState } from "react";
 import "./App.css";
 import Tweet from "./components/tweet/tweet";
-import { demoData } from "./external-api/demoData";
 
-function App({ twitter }) {
-  // const params = {
-  //   query: "nft -is:retweet lang:en",
-  //   max_results: 10,
-  //   "tweet.fields": "created_at,public_metrics",
-  //   expansions: "author_id",
-  // };
-  const tweetData = demoData.data;
-  const users = {};
-  const authorData = demoData.includes.users;
-  authorData.forEach((user) => {
-    users[user.id] = { name: user.name, username: user.username };
-  });
-  console.log(users);
+function App() {
+  const [tweetData, setTweetData] = useState(null);
+
+  async function onPullData() {
+    console.log("Pull Data clicked!");
+    const response = await (await fetch("http://localhost:8080/tweet")).json();
+    console.log(response);
+
+    const users = {};
+    const authorData = response.includes.users;
+    authorData.forEach((user) => {
+      users[user.id] = { name: user.name, username: user.username };
+    });
+    setTweetData({ tweets: response.data, users });
+    console.log(users);
+  }
+
   return (
     <div className="app">
       <header>
@@ -23,10 +26,14 @@ function App({ twitter }) {
       </header>
 
       <article>Influencers' Tweets created in the last 7 days.</article>
+      <button className="getTweet" onClick={onPullData}>
+        Pull Data
+      </button>
       <div className="container">
-        {tweetData.map((data) => (
-          <Tweet key={data.id} data={data} users={users} />
-        ))}
+        {tweetData &&
+          tweetData.tweets.map((data) => (
+            <Tweet key={data.id} data={data} users={tweetData.users} />
+          ))}
       </div>
     </div>
   );
