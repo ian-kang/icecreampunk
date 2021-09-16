@@ -1,7 +1,12 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 header {
   text-align: center;
   font-size: 2rem;
-  margin: 3rem;
   margin-bottom: 10rem;
   cursor: pointer;
   transition: ease-out 500ms;
@@ -11,9 +16,19 @@ header:hover {
   transform: scale(1.05);
 }
 
+.icecream {
+  font-size: 5rem;
+}
+
 article {
   text-align: center;
   font-size: 1.5rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
 }
 
 .neon_text {
@@ -23,4 +38,10 @@ article {
     /* green glow */ 0 0 42px var(--main-color-scheme),
     0 0 82px var(--main-color-scheme), 0 0 92px var(--main-color-scheme),
     0 0 102px var(--main-color-scheme), 0 0 151px var(--main-color-scheme);
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    font-size: 1.5rem;
+  }
 }
