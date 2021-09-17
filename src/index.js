@@ -3,10 +3,13 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import Twitter from "./services/twitter/twitter";
+
+const twitter = new Twitter();
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App twitter={twitter} />
   </React.StrictMode>,
   document.getElementById("root")
 );

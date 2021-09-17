@@ -1,35 +1,48 @@
-import { useState } from "react";
-import "./App.css";
+import Button from "./components/button/button";
+import Header from "./components/header/header";
 import Tweet from "./components/tweet/tweet";
+import styles from "./App.module.css";
 
-function App() {
+import { useState } from "react";
+import ImageUpload from "./components/fileUpload/imageUpload";
+import CheckItem from "./components/check-item/checkItem";
+import Image from "./components/image/image";
+import { DATABASE } from "./localData/imageData";
+
+function App({ twitter }) {
   const [tweetData, setTweetData] = useState(null);
+  const [itemList, setItemList] = useState([]);
 
-  async function onPullData() {
-    const response = await fetch(
-      `${process.env.REACT_APP_TWEET_FETCH_URL}/tweet`
-    );
-    const jsonResponse = await response.json();
-
-    const users = {};
-    const authorData = jsonResponse.includes.users;
-    authorData.forEach((user) => {
-      users[user.id] = { name: user.name, username: user.username };
-    });
-    setTweetData({ tweets: jsonResponse.data, users });
+  async function handlePullData() {
+    const data = await twitter.getTweets();
+    setTweetData({ tweets: data.tweets, users: data.users });
   }
 
-  return (
-    <div className="app">
-      <header>
-        <h1 className="neon_text">ICECREAMPUNK</h1>
-      </header>
+  function addItem(item) {
+    setItemList([...itemList, item]);
+  }
 
+  function deleteItem(item) {
+    const updatedItems = itemList.filter((element) => element !== item);
+    setItemList(updatedItems);
+  }
+  const checkItems = Object.keys(DATABASE);
+  return (
+    <div className={styles.app}>
+      <Header />
       <article>Influencers' Tweets created in the last 7 days.</article>
-      <button className="button neon_text" onClick={onPullData}>
-        Pull Data
-      </button>
-      <div className="container">
+      <Button text={"Pull Data"} onPullData={handlePullData} />
+      <Button text={"None"} />
+      <ImageUpload />
+      {checkItems.map((item) => (
+        <CheckItem text={item} addItem={addItem} deleteItem={deleteItem} />
+      ))}
+
+      {itemList.map((item) => (
+        <Image item={DATABASE[item]} />
+      ))}
+
+      <div className={styles.tweetListBox}>
         {tweetData &&
           tweetData.tweets.map((data) => (
             <Tweet key={data.id} data={data} users={tweetData.users} />

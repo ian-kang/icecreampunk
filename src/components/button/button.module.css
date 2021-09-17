@@ -1,0 +1,22 @@
+.button {
+  width: 5rem;
+  height: 2rem;
+  outline: none;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  background: transparent;
+  border: solid 1px var(--main-color-scheme);
+  cursor: pointer;
+  transition: all 400ms;
+  /* Neon Text */
+  color: #fff;
+  text-shadow:
+      /* white glow */ 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff,
+    /* green glow */ 0 0 42px var(--main-color-scheme),
+    0 0 82px var(--main-color-scheme), 0 0 92px var(--main-color-scheme),
+    0 0 102px var(--main-color-scheme), 0 0 151px var(--main-color-scheme);
+}
+
+.button:hover {
+  transform: scale(0.95);
+}
