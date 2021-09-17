@@ -3,13 +3,10 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import TwitterApi from "./external-api/twitter";
-
-const twitter = new TwitterApi(process.env.REACT_APP_TWITTER_BEARER_TOKEN);
 
 ReactDOM.render(
   <React.StrictMode>
-    <App twitter={twitter} />
+    <App />
   </React.StrictMode>,
   document.getElementById("root")
 );

@@ -25,12 +25,20 @@ article {
   font-size: 1.5rem;
 }
 
-.getTweet {
+.button {
   width: 5rem;
   height: 2rem;
   outline: none;
   margin-top: 1rem;
   border-radius: 0.5rem;
+  background: transparent;
+  border: solid 1px var(--main-color-scheme);
+  cursor: pointer;
+  transition: all 400ms;
+}
+
+.button:hover {
+  transform: scale(0.95);
 }
 
 .container {

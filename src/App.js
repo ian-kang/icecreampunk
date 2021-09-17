@@ -6,19 +6,17 @@ function App() {
   const [tweetData, setTweetData] = useState(null);
 
   async function onPullData() {
-    console.log("Pull Data clicked!");
-    const response = await (
-      await fetch(`${process.env.REACT_APP_TWEET_FETCH_URL}/tweet`)
-    ).json();
-    console.log(response);
+    const response = await fetch(
+      `${process.env.REACT_APP_TWEET_FETCH_URL}/tweet`
+    );
+    const jsonResponse = await response.json();
 
     const users = {};
-    const authorData = response.includes.users;
+    const authorData = jsonResponse.includes.users;
     authorData.forEach((user) => {
       users[user.id] = { name: user.name, username: user.username };
     });
-    setTweetData({ tweets: response.data, users });
-    console.log(users);
+    setTweetData({ tweets: jsonResponse.data, users });
   }
 
   return (
@@ -28,7 +26,7 @@ function App() {
       </header>
 
       <article>Influencers' Tweets created in the last 7 days.</article>
-      <button className="getTweet" onClick={onPullData}>
+      <button className="button neon_text" onClick={onPullData}>
         Pull Data
       </button>
       <div className="container">
