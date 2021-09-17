@@ -7,7 +7,9 @@ function App() {
 
   async function onPullData() {
     console.log("Pull Data clicked!");
-    const response = await (await fetch("http://localhost:8080/tweet")).json();
+    const response = await (
+      await fetch(`${process.env.REACT_APP_TWEET_FETCH_URL}/tweet`)
+    ).json();
     console.log(response);
 
     const users = {};
