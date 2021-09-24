@@ -4,9 +4,9 @@ import styles from "./image.module.css";
 const Image = ({ item }) => (
   <img
     style={{ zIndex: item.zIndex }}
-    className={styles.image1}
+    className={styles.image}
     src={item.src}
-    alt=""
+    alt="none"
   />
 );
 

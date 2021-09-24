@@ -1,4 +1,5 @@
-.image1 {
-  position: absolute;
-  top: 700px;
+.image {
+  width: 500px;
+  height: 500px;
+  position: fixed;
 }

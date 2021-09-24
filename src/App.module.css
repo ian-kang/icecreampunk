@@ -1,17 +1,33 @@
 .app {
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: white;
+  background-color: black;
 }
 
-article {
-  text-align: center;
-  font-size: 1.5rem;
+a {
+  text-decoration: none;
+  color: white;
+}
+a:hover {
+  color: var(--main-color-scheme);
 }
 
-.tweetListBox {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
+.header {
+  width: 100%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin-bottom: 3rem;
+  position: sticky;
+  top: 0;
+  background-color: black;
+  border: solid 0.2rem #fff;
+  border-radius: 1rem;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #bc13fe,
+    0 0 0.8rem #bc13fe, 0 0 2.8rem #bc13fe, inset 0 0 1.3rem #bc13fe;
+  cursor: pointer;
+  user-select: none;
+  z-index: 99;
 }

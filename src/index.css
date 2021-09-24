@@ -1,5 +1,6 @@
 :root {
   --main-color-scheme: #05d9e9;
+  background-color: black;
 }
 
 body {
@@ -9,8 +10,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
-  background-color: black;
-  color: white;
 }
 
 code {

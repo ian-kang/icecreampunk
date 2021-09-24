@@ -11,7 +11,7 @@ const CheckItem = ({ text, addItem, deleteItem }) => {
   return (
     <div>
       <input type="checkbox" id={text} name={text} onChange={onCheckBox} />
-      <label for={text}>{text}</label>
+      <label htmlFor={text}>{text}</label>
     </div>
   );
 };

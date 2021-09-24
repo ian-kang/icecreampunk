@@ -1,0 +1,33 @@
+{
+  "beard": {
+    "id": 1,
+    "name": "beard",
+    "src": "https://res.cloudinary.com/db7ss52zt/image/upload/v1632242162/S__31981580-removebg-preview_b3ukra.png",
+    "zIndex": 1
+  },
+
+  "hat": {
+    "id": 2,
+    "name": "hat",
+    "src": "https://res.cloudinary.com/db7ss52zt/image/upload/v1632242162/S__31981576-removebg-preview_qgaoap.png",
+    "zIndex": 2
+  },
+  "mustach": {
+    "id": 3,
+    "name": "mustach",
+    "src": "https://res.cloudinary.com/db7ss52zt/image/upload/v1632242162/S__31981578-removebg-preview_kn1uj2.png",
+    "zIndex": 3
+  },
+  "sunglass": {
+    "id": 4,
+    "name": "sunglass",
+    "src": "https://res.cloudinary.com/db7ss52zt/image/upload/v1632242162/S__31981579-removebg-preview_lvm3rr.png",
+    "zIndex": 4
+  },
+  "background": {
+    "id": 0,
+    "name": "background",
+    "src": "https://res.cloudinary.com/db7ss52zt/image/upload/c_scale,h_500,w_500/v1631203467/sample.jpg",
+    "zIndex": 0
+  }
+}

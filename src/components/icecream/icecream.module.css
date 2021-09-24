@@ -1,0 +1,17 @@
+.body {
+  width: 100%;
+  display: flex;
+}
+
+.checkItemContainer {
+  margin: 2rem;
+}
+
+.canvasContainer {
+  margin: 2rem;
+  position: relative;
+}
+
+.layerContainer {
+  margin: 2rem;
+}
