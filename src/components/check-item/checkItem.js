@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./checkItem.module.css";
 
 const CheckItem = ({ text, addItem, deleteItem }) => {
   const onCheckBox = (event) => {
@@ -9,7 +10,7 @@ const CheckItem = ({ text, addItem, deleteItem }) => {
     deleteItem(event.target.name);
   };
   return (
-    <div>
+    <div className={styles.checkbox}>
       <input type="checkbox" id={text} name={text} onChange={onCheckBox} />
       <label htmlFor={text}>{text}</label>
     </div>

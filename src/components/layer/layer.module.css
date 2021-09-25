@@ -1,0 +1,25 @@
+.button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.3rem;
+  margin: 0.2rem;
+  border: solid 0.2rem #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #bc13fe,
+    0 0 0.8rem #bc13fe, inset 0 0 1.3rem #bc13fe;
+  cursor: pointer;
+  user-select: none;
+  transition: ease-out 300ms;
+}
+.text {
+  font-family: "Comic Neue", cursive;
+  flex-basis: 90%;
+  text-align: center;
+}
+
+.button:hover {
+  transform: scale(1.02);
+}

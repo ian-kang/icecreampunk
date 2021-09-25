@@ -1,0 +1,31 @@
+.checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+  margin: 0.3rem;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.2rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  cursor: pointer;
+  user-select: none;
+  transition: ease-out 300ms;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #bc13fe;
+}
+
+[type="checkbox"],
+label {
+  cursor: pointer;
+}
+
+[type="checkbox"] {
+}
+
+label {
+  font-family: "Comic Neue", cursive;
+  margin-left: 0.5rem;
+}
+
+.checkbox:hover {
+  transform: scale(1.1);
+}

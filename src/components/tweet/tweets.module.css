@@ -1,0 +1,15 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button {
+  margin-bottom: 3rem;
+}
+
+.tweetListBox {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}

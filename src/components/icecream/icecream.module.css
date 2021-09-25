@@ -1,17 +1,76 @@
 .body {
+  padding: 0;
   width: 100%;
   display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .checkItemContainer {
-  margin: 2rem;
+  margin: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.canvasWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .canvasContainer {
-  margin: 2rem;
+  width: 500px;
+  height: 500px;
+  background-color: honeydew;
+  border-radius: 0.5rem;
   position: relative;
 }
 
+.canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.downloadButton {
+  width: 300px;
+  height: 30px;
+  text-align: center;
+  border-radius: 0.2rem;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #bc13fe,
+    0 0 0.8rem #bc13fe;
+  margin-top: 1rem;
+  user-select: none;
+  cursor: pointer;
+}
+
+.download {
+  margin-right: 1rem;
+  font-weight: bold;
+}
+
 .layerContainer {
-  margin: 2rem;
+  margin: 0 2rem;
+  text-align: center;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #bc13fe,
+    0 0 0.8rem #bc13fe;
+}
+
+.text {
+  margin: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .body {
+    flex-direction: column;
+    align-items: center;
+  }
+  .canvasContainer {
+    width: 300px;
+    height: 300px;
+  }
 }

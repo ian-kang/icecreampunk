@@ -1,9 +1,8 @@
 import Button from "../button/button";
 import Tweet from "./tweet";
-import styles from "./tweet.module.css";
+import styles from "./tweets.module.css";
 import { Spinner } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-
 import { useState } from "react";
 
 function Tweets({ twitter }) {
@@ -18,14 +17,13 @@ function Tweets({ twitter }) {
   }
 
   return (
-    <div className={styles.app}>
+    <div className={styles.body}>
       <article className={styles.article}>
         Influencers' Tweets created in the last 7 days.
       </article>
       <div className={styles.button}>
         <Button text={"Pull Data"} onPullData={handlePullData} />
       </div>
-
       {progress ? (
         <Spinner animation="grow" variant="light" />
       ) : (

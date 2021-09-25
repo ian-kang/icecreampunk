@@ -10,7 +10,7 @@ const Header = () => (
         <Link to="/tweets">NFT Tweets</Link>
       </button>
       <button className={styles.button}>
-        <Link to="/icecream">NFT Icecreampunk</Link>
+        <Link to="/icecream">Icecreampunk</Link>
       </button>
       <button className={styles.button}>
         <Link to="/">Coming Soon</Link>

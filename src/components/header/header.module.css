@@ -9,7 +9,7 @@
 
 /* Neon Text */
 .logo {
-  margin-bottom: 7rem;
+  margin-bottom: 5rem;
   cursor: pointer;
   transition: ease-out 500ms;
   user-select: none;
@@ -40,7 +40,8 @@
 }
 
 @media screen and (max-width: 768px) {
-  header {
-    font-size: 1.4rem;
+  .logo {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
   }
 }

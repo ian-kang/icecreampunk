@@ -1,8 +1,10 @@
 .button {
+  width: 5rem;
+  height: 2rem;
   outline: none;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  border-radius: 0.5rem;
+  border-radius: 0.3rem;
   background: transparent;
   border: solid 1px var(--main-color-scheme);
   cursor: pointer;

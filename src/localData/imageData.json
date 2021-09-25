@@ -1,33 +1,74 @@
 {
-  "beard": {
+  "cloth1": {
     "id": 1,
-    "name": "beard",
-    "src": "https://res.cloudinary.com/db7ss52zt/image/upload/v1632242162/S__31981580-removebg-preview_b3ukra.png",
+    "name": "cloth1",
+    "src": "https://res.cloudinary.com/db7ss52zt/image/upload/v1632528478/jersey-removebg-preview_ivgbek.png",
     "zIndex": 1
   },
-
-  "hat": {
+  "hair1": {
     "id": 2,
-    "name": "hat",
-    "src": "https://res.cloudinary.com/db7ss52zt/image/upload/v1632242162/S__31981576-removebg-preview_qgaoap.png",
+    "name": "hair1",
+    "src": "https://res.cloudinary.com/db7ss52zt/image/upload/v1632528478/hair-removebg-preview_sscqsj.png",
     "zIndex": 2
   },
-  "mustach": {
+  "unknonw1": {
     "id": 3,
-    "name": "mustach",
-    "src": "https://res.cloudinary.com/db7ss52zt/image/upload/v1632242162/S__31981578-removebg-preview_kn1uj2.png",
+    "name": "unknonw1",
+    "src": "https://res.cloudinary.com/db7ss52zt/image/upload/v1632528477/S__32129047-removebg-preview_b2gsk0.png",
     "zIndex": 3
   },
-  "sunglass": {
+  "unknonw2": {
     "id": 4,
-    "name": "sunglass",
-    "src": "https://res.cloudinary.com/db7ss52zt/image/upload/v1632242162/S__31981579-removebg-preview_lvm3rr.png",
+    "name": "unknonw2",
+    "src": "https://res.cloudinary.com/db7ss52zt/image/upload/v1632528477/S__32129039-removebg-preview_gvr39p.png",
     "zIndex": 4
+  },
+  "cloth2": {
+    "id": 0,
+    "name": "cloth2",
+    "src": "https://res.cloudinary.com/db7ss52zt/image/upload/v1632528477/S__32129048-removebg-preview_xqaxng.png",
+    "zIndex": 0
+  },
+  "icecream1": {
+    "id": 0,
+    "name": "icecream1",
+    "src": "https://res.cloudinary.com/db7ss52zt/image/upload/v1632528478/icecreamcorn-removebg-preview_whpho0.png",
+    "zIndex": 0
+  },
+  "hair2": {
+    "id": 0,
+    "name": "hair2",
+    "src": "https://res.cloudinary.com/db7ss52zt/image/upload/v1632528477/S__32129037-removebg-preview_gpliqz.png",
+    "zIndex": 0
+  },
+  "unknonw3": {
+    "id": 0,
+    "name": "unknonw3",
+    "src": "https://res.cloudinary.com/db7ss52zt/image/upload/v1632528477/S__32129052-removebg-preview_bvgnrt.png",
+    "zIndex": 0
+  },
+  "eye1": {
+    "id": 0,
+    "name": "eye1",
+    "src": "https://res.cloudinary.com/db7ss52zt/image/upload/v1632528478/eye-removebg-preview_ggegyd.png",
+    "zIndex": 0
+  },
+  "body1": {
+    "id": 0,
+    "name": "body1",
+    "src": "https://res.cloudinary.com/db7ss52zt/image/upload/v1632528697/S__32129053-removebg-preview_zhzzfn.png",
+    "zIndex": 0
+  },
+  "icecream2": {
+    "id": 0,
+    "name": "icecream2",
+    "src": "https://res.cloudinary.com/db7ss52zt/image/upload/v1632528477/S__32129034-removebg-preview_h6n4p8.png",
+    "zIndex": 0
   },
   "background": {
     "id": 0,
     "name": "background",
-    "src": "https://res.cloudinary.com/db7ss52zt/image/upload/c_scale,h_500,w_500/v1631203467/sample.jpg",
+    "src": "https://res.cloudinary.com/db7ss52zt/image/upload/v1632529994/Mint-Color-solid-color-background_bvbi4z.jpg",
     "zIndex": 0
   }
 }
