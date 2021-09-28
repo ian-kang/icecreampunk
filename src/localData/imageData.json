@@ -27,43 +27,43 @@
     "id": 0,
     "name": "cloth2",
     "src": "https://res.cloudinary.com/db7ss52zt/image/upload/v1632528477/S__32129048-removebg-preview_xqaxng.png",
-    "zIndex": 0
+    "zIndex": 5
   },
   "icecream1": {
     "id": 0,
     "name": "icecream1",
     "src": "https://res.cloudinary.com/db7ss52zt/image/upload/v1632528478/icecreamcorn-removebg-preview_whpho0.png",
-    "zIndex": 0
+    "zIndex": 6
   },
   "hair2": {
     "id": 0,
     "name": "hair2",
     "src": "https://res.cloudinary.com/db7ss52zt/image/upload/v1632528477/S__32129037-removebg-preview_gpliqz.png",
-    "zIndex": 0
+    "zIndex": 7
   },
   "unknonw3": {
     "id": 0,
     "name": "unknonw3",
     "src": "https://res.cloudinary.com/db7ss52zt/image/upload/v1632528477/S__32129052-removebg-preview_bvgnrt.png",
-    "zIndex": 0
+    "zIndex": 8
   },
   "eye1": {
     "id": 0,
     "name": "eye1",
     "src": "https://res.cloudinary.com/db7ss52zt/image/upload/v1632528478/eye-removebg-preview_ggegyd.png",
-    "zIndex": 0
+    "zIndex": 9
   },
   "body1": {
     "id": 0,
     "name": "body1",
-    "src": "https://res.cloudinary.com/db7ss52zt/image/upload/v1632528697/S__32129053-removebg-preview_zhzzfn.png",
-    "zIndex": 0
+    "src": "https://res.cloudinary.com/db7ss52zt/image/upload/v1632756655/unnamed_or6rv5.png",
+    "zIndex": 10
   },
   "icecream2": {
     "id": 0,
     "name": "icecream2",
     "src": "https://res.cloudinary.com/db7ss52zt/image/upload/v1632528477/S__32129034-removebg-preview_h6n4p8.png",
-    "zIndex": 0
+    "zIndex": 11
   },
   "background": {
     "id": 0,

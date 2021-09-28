@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import CheckItem from "../check-item/checkItem";
 import DATABASE from "../../localData/imageData.json";
 import styles from "./icecream.module.css";
-import Layer from "../layer/Layer";
 
 function Icecream() {
   const baseCanvasRef = useRef();
@@ -26,13 +25,24 @@ function Icecream() {
       });
   });
 
-  // draw the image on canvas
   function addItem(item) {
+    if (item === "background") {
+      setItemList([item, ...checkedItemList]);
+      return;
+    } else if (item === "body1") {
+      let copyList = [...checkedItemList];
+      copyList.splice(1, 0, item);
+      console.log(copyList);
+      setItemList(copyList);
+      return;
+    }
     setItemList([...checkedItemList, item]);
   }
 
   function deleteItem(item) {
     const updatedItems = checkedItemList.filter((element) => element !== item);
+    console.log(updatedItems);
+
     setItemList(updatedItems);
   }
 
@@ -52,7 +62,12 @@ function Icecream() {
       </div>
       <div className={styles.canvasWrapper}>
         <div className={styles.canvasContainer}>
-          <canvas ref={baseCanvasRef} className={styles.canvas}></canvas>
+          <canvas
+            ref={baseCanvasRef}
+            className={styles.canvas}
+            width="500px"
+            height="500px"
+          ></canvas>
         </div>
         <a
           ref={downloadRef}
@@ -63,13 +78,6 @@ function Icecream() {
 
           <i className="fas fa-ice-cream"></i>
         </a>
-      </div>
-      <div className={styles.layerContainer}>
-        <span className={styles.text}>Layers</span>
-
-        {checkedItemList.map((item) => (
-          <Layer key={item} name={item} />
-        ))}
       </div>
     </div>
   );
