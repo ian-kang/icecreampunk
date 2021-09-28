@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import CheckItem from "../check-item/checkItem";
 import DATABASE from "../../localData/imageData.json";
 import styles from "./icecream.module.css";
+import Button from "../button/button";
 
 function Icecream() {
   const baseCanvasRef = useRef();
@@ -48,6 +49,22 @@ function Icecream() {
 
   const totalItems = Object.keys(DATABASE);
 
+  function shareWebsite() {
+    if (navigator.share) {
+      navigator
+        .share({
+          title: "Icecreampunks",
+          url: "https://www.google.com",
+        })
+        .then(() => {
+          console.log("shared!", window.location.href);
+        })
+        .catch(console.error);
+    } else {
+      console.log("not supported!");
+    }
+  }
+
   return (
     <div className={styles.body}>
       <div className={styles.checkItemContainer}>
@@ -75,9 +92,9 @@ function Icecream() {
           download="Icecreampunk.png"
         >
           <span className={styles.download}>Download</span>
-
           <i className="fas fa-ice-cream"></i>
         </a>
+        <Button text={"Share"} onClick={shareWebsite} />
       </div>
     </div>
   );

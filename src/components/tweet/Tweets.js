@@ -22,7 +22,7 @@ function Tweets({ twitter }) {
         Influencers' Tweets created in the last 7 days.
       </article>
       <div className={styles.button}>
-        <Button text={"Pull Data"} onPullData={handlePullData} />
+        <Button text={"Pull Data"} onClick={handlePullData} />
       </div>
       {progress ? (
         <Spinner animation="grow" variant="light" />

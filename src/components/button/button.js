@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./button.module.css";
 
-const Button = ({ text, onPullData }) => (
-  <button className={styles.button} onClick={onPullData}>
+const Button = ({ text, onClick }) => (
+  <button className={styles.button} onClick={onClick}>
     {text}
   </button>
 );
